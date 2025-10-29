@@ -1,47 +1,122 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TypoTheme {
-  static TextStyle bold60 = TextStyle(
-    fontSize: 60,
-    fontWeight: FontWeight.bold,
-  );
+  static Color _headerColor(BuildContext context) =>
+      Theme.of(context).colorScheme.onBackground;
 
-  static TextStyle medium14 = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-  );
+  static Color _contentColor(BuildContext context) =>
+      Theme.of(context).colorScheme.onSurface;
 
-  static TextStyle medium16 = TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.w500,
-  );
+  static Widget bold60(BuildContext context, {required String text}) {
+    return Text(
+      text,
+      style: GoogleFonts.inter(
+        textStyle: TextStyle(
+          color: _headerColor(context),
+          fontWeight: FontWeight.bold,
+          fontStyle: FontStyle.normal,
+          fontSize: 60,
+        ),
+      ),
+    );
+  }
 
-  static TextStyle regular16 = TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.w400,
-  );
+  static Widget medium14(BuildContext context, {required String text}) {
+    return Text(
+      text,
+      style: GoogleFonts.inter(
+        textStyle: TextStyle(
+          color: _contentColor(context),
+          fontWeight: FontWeight.w500,
+          fontStyle: FontStyle.normal,
+          fontSize: 14,
+        ),
+      ),
+    );
+  }
 
-  static TextStyle semiBold36 = TextStyle(
-    fontSize: 36,
-    fontWeight: FontWeight.w600,
-  );
+  static Widget medium16(BuildContext context, {required String text}) {
+    return Text(
+      text,
+      style: GoogleFonts.inter(
+        textStyle: TextStyle(
+          color: _contentColor(context),
+          fontWeight: FontWeight.w500,
+          fontStyle: FontStyle.normal,
+          fontSize: 16,
+        ),
+      ),
+    );
+  }
 
-  static TextStyle semiBold20 = TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.w600,
-  );
+  static Widget regular16(BuildContext context, {required String text}) {
+    return Text(
+      text,
+      style: GoogleFonts.inter(
+        textStyle: TextStyle(
+          color: _contentColor(context),
+          fontWeight: FontWeight.w400,
+          fontStyle: FontStyle.normal,
+          fontSize: 16,
+        ),
+      ),
+    );
+  }
 
-  static TextStyle semiBold30 = TextStyle(
-    fontSize: 30,
-    fontWeight: FontWeight.w600,
-  );
+  static Widget semiBold36(BuildContext context, {required String text}) {
+    return Text(
+      text,
+      style: GoogleFonts.inter(
+        textStyle: TextStyle(
+          color: _contentColor(context),
+          fontWeight: FontWeight.w600,
+          fontStyle: FontStyle.normal,
+          fontSize: 36,
+        ),
+      ),
+    );
+  }
 
-  static TextStyle regular18 = TextStyle(
-    fontSize: 18,
-    fontWeight: FontWeight.w400,
-  );
-  static TextStyle regular20 = TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.w400,
-  );
+  static Widget semiBold30(BuildContext context, {required String text}) {
+    return Text(
+      text,
+      style: GoogleFonts.inter(
+        textStyle: TextStyle(
+          color: _contentColor(context),
+          fontWeight: FontWeight.w600,
+          fontStyle: FontStyle.normal,
+          fontSize: 30,
+        ),
+      ),
+    );
+  }
+
+  static Widget regular18(BuildContext context, {required String text}) {
+    return Text(
+      text,
+      style: GoogleFonts.inter(
+        textStyle: TextStyle(
+          color: _contentColor(context),
+          fontWeight: FontWeight.w400,
+          fontStyle: FontStyle.normal,
+          fontSize: 18,
+        ),
+      ),
+    );
+  }
+
+  static Widget regular20(BuildContext context, {required String text}) {
+    return Text(
+      text,
+      style: GoogleFonts.inter(
+        textStyle: TextStyle(
+          color: _contentColor(context),
+          fontWeight: FontWeight.w400,
+          fontStyle: FontStyle.normal,
+          fontSize: 20,
+        ),
+      ),
+    );
+  }
 }

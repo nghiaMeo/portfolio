@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/theme/app_theme.dart';
-import 'package:portfolio/features/home/presentation/page/home_page.dart';
+import 'package:provider/provider.dart';
+import 'core/theme/theme_notifier.dart';
+import 'core/theme/app_theme.dart';
+import 'features/home/presentation/page/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ThemeNotifier(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,10 +18,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
+
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Portfolio",
-      theme: AppTheme.light.themeData,
-      darkTheme: AppTheme.dark.themeData,
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+      themeMode: themeNotifier.themeMode,
       home: HomePage(),
     );
   }
