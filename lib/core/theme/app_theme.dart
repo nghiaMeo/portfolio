@@ -6,9 +6,7 @@ class AppTheme {
   static final light = ThemeData(
     brightness: Brightness.light,
     colorScheme: const ColorScheme.light(
-      background: AppColors.backgroundLightPrimary,
-      onBackground: AppColors.textHeaderLightTheme,
-      surface: Colors.white,
+      surface: AppColors.backgroundLightPrimary,
       onSurface: AppColors.textContentLightTheme,
     ),
     textTheme: const TextTheme(
@@ -35,8 +33,6 @@ class AppTheme {
     brightness: Brightness.dark,
     scaffoldBackgroundColor: AppColors.backgroundDarkPrimary,
     colorScheme: const ColorScheme.dark(
-      background: AppColors.backgroundDarkPrimary,
-      onBackground: AppColors.textHeaderDarkTheme,
       surface: AppColors.backgroundDarkSecond,
       onSurface: AppColors.textContentDarkTheme,
     ),

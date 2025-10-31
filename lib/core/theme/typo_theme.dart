@@ -53,6 +53,7 @@ class TypoTheme {
   static Widget regular16(BuildContext context, {required String text}) {
     return Text(
       text,
+      softWrap: true,
       style: GoogleFonts.inter(
         textStyle: TextStyle(
           color: _contentColor(context),
