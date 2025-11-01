@@ -5,6 +5,12 @@ import 'app_colors.dart';
 class AppTheme {
   static final light = ThemeData(
     brightness: Brightness.light,
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.backgroundLightPrimary,
+      elevation: 0,
+      scrolledUnderElevation: 0,
+      surfaceTintColor: Colors.transparent,
+    ),
     colorScheme: const ColorScheme.light(
       surface: AppColors.backgroundLightPrimary,
       onSurface: AppColors.textContentLightTheme,
@@ -31,6 +37,12 @@ class AppTheme {
 
   static final dark = ThemeData(
     brightness: Brightness.dark,
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.backgroundDarkPrimary,
+      elevation: 0,
+      scrolledUnderElevation: 0,
+      surfaceTintColor: Colors.transparent,
+    ),
     scaffoldBackgroundColor: AppColors.backgroundDarkPrimary,
     colorScheme: const ColorScheme.dark(
       surface: AppColors.backgroundDarkSecond,

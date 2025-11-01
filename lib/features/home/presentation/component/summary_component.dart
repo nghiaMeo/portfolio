@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
-import 'package:portfolio/features/summary/presentation/widgets/button_social_widget.dart';
+import 'package:portfolio/features/home/presentation/widgets/button_social_widget.dart';
 
 import '../../../../core/assets/images/app_images.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -44,9 +44,9 @@ Widget _descriptionWidget(BuildContext context) {
       SizedBox(height: 50),
       _livingWidget(context),
       SizedBox(height: 5),
-      _available(context),
+      _availableWidget(context),
       SizedBox(height: 50),
-      _socialMedia(context),
+      _socialMediaWidget(context),
     ],
   );
 }
@@ -80,7 +80,7 @@ Widget _livingWidget(BuildContext context) {
   );
 }
 
-Widget _available(BuildContext context) {
+Widget _availableWidget(BuildContext context) {
   return Row(
     children: [
       SvgPicture.asset(AppVectors.dot),
@@ -90,7 +90,7 @@ Widget _available(BuildContext context) {
   );
 }
 
-Widget _socialMedia(BuildContext context) {
+Widget _socialMediaWidget(BuildContext context) {
   return Row(
     spacing: 1,
     mainAxisAlignment: MainAxisAlignment.start,

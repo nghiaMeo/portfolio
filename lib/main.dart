@@ -13,20 +13,32 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
+    final isDark = themeNotifier.themeMode == ThemeMode.dark;
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Portfolio",
-      theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
-      themeMode: themeNotifier.themeMode,
-      home: HomePage(),
+    return AnimatedTheme(
+      duration: const Duration(microseconds: 100),
+      curve: Curves.easeInOut,
+      data: isDark ? ThemeData.dark() : ThemeData.light(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "Portfolio",
+        theme: AppTheme.light,
+        darkTheme: AppTheme.dark,
+        themeMode: themeNotifier.themeMode,
+        home: HomePage(),
+      ),
     );
   }
 }
