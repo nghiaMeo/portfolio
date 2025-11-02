@@ -9,4 +9,21 @@ class AppVectors {
   static const github = '${basePath}github$format';
   static const linkedin = '${basePath}linkedin$format';
   static const twitter = '${basePath}twitter$format';
+
+  //vectors/lang/
+  static const basePathLang = 'assets/vectors/lang/';
+  static const flutter = '${basePathLang}flutter$format';
+  static const java = '${basePathLang}java$format';
+  static const python = '${basePathLang}python$format';
+  static const springBoot = '${basePathLang}springBoot$format';
+  static const ubuntu = '${basePathLang}ubuntu$format';
+  static const mySql = '${basePathLang}mySql$format';
+  static const gitlab = '${basePathLang}gitlab$format';
+  static const git = '${basePathLang}git$format';
+  static const docker = '${basePathLang}docker$format';
+  static const postgreSql = '${basePathLang}postgreSql$format';
+
+
+
+
 }
