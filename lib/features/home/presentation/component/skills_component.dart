@@ -27,7 +27,6 @@ class _SkillsComponentState extends State<SkillsComponent> {
       {'svg': AppVectors.ubuntu, 'name': 'Ubuntu'},
       {'svg': AppVectors.postgreSql, 'name': 'PostgreSQL'},
       {'svg': AppVectors.mySql, 'name': 'MySQL'},
-
     ];
     final isLightTheme = Theme.of(context).brightness == Brightness.light;
 
@@ -35,52 +34,53 @@ class _SkillsComponentState extends State<SkillsComponent> {
       color: isLightTheme
           ? AppColors.backgroundLightPrimary
           : AppColors.backgroundDarkPrimary,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          SizedBox(height: 100),
-          Center(
-            child: titleComponentWidget(
-              context,
-              text: "Skills",
-              appColors: isLightTheme
-                  ? AppColors.greyLight
-                  : AppColors.greyDark,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 100),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            SizedBox(height: 100),
+            Center(
+              child: titleComponentWidget(
+                context,
+                text: "Skills",
+                appColors: isLightTheme
+                    ? AppColors.greyLight
+                    : AppColors.greyDark,
+              ),
             ),
-          ),
-          SizedBox(height: 10),
-          TypoTheme.regular20(
-            context,
-            text: 'The skills, tools and technologies I am really good at:',
-          ),
-          SizedBox(height: 80),
-          Center(child: _gridSkillsWidget(context, techList)),
-          SizedBox(height: 80),
-        ],
+            SizedBox(height: 10),
+            TypoTheme.regular20(
+              context,
+              text: 'The skills, tools and technologies I am really good at:',
+            ),
+            SizedBox(height: 80),
+            _gridSkillsWidget(context, techList),
+            SizedBox(height: 80),
+          ],
+        ),
       ),
     );
   }
 }
 
 Widget _gridSkillsWidget(BuildContext context, List techList) {
-  return GridView.builder(
-    shrinkWrap: true,
-    physics: const NeverScrollableScrollPhysics(),
-    itemCount: techList.length,
-    gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-      maxCrossAxisExtent: 200,
+  return Center(
+    child: Wrap(
+      alignment: WrapAlignment.center,
+      spacing: 100,
+      runSpacing: 100,
+      children: techList.map((tech) {
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SvgPicture.asset(tech['svg']!, width: 64, height: 64),
+            const SizedBox(height: 8),
+            TypoTheme.regular18(context, text: tech['name']),
+          ],
+        );
+      }).toList(),
     ),
-    itemBuilder: (context, index) {
-      final tech = techList[index];
-      return Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          SvgPicture.asset(tech['svg']!, width: 64, height: 64),
-          const SizedBox(height: 8),
-          TypoTheme.regular18(context, text: tech['name']),
-        ],
-      );
-    },
   );
 }

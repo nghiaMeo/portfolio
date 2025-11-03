@@ -93,6 +93,20 @@ class TypoTheme {
     );
   }
 
+  static Widget semiBold20(BuildContext context, {required String text}) {
+    return Text(
+      text,
+      style: GoogleFonts.inter(
+        textStyle: TextStyle(
+          color: _contentColor(context),
+          fontWeight: FontWeight.w600,
+          fontStyle: FontStyle.normal,
+          fontSize: 20,
+        ),
+      ),
+    );
+  }
+
   static Widget regular18(BuildContext context, {required String text}) {
     return Text(
       text,

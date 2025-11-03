@@ -17,7 +17,7 @@ class AboutComponent extends StatelessWidget {
           ? AppColors.backgroundLightSecond
           : AppColors.backgroundDarkSecond,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 100),

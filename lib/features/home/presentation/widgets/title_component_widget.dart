@@ -6,13 +6,18 @@ Widget titleComponentWidget(
   required String text,
   required Color appColors,
 }) {
-  return Container(
-    height: 28,
-    width: 115,
-    decoration: BoxDecoration(
-      color: appColors,
-      borderRadius: BorderRadius.circular(12),
+  return IntrinsicWidth(
+    child: IntrinsicHeight(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+        decoration: BoxDecoration(
+          color: appColors,
+          borderRadius: BorderRadius.circular(18),
+        ),
+        child: Center(
+          child: TypoTheme.medium16(context, text: text),
+        ),
+      ),
     ),
-    child: Center(child: TypoTheme.medium16(context, text: text)),
   );
 }
