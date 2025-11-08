@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/theme/typo_theme.dart';
 import 'package:portfolio/features/home/presentation/component/skills_component.dart';
+import 'package:portfolio/features/home/presentation/component/work_component.dart';
 import 'package:portfolio/features/home/presentation/widgets/appbar_widget.dart';
 
 import '../component/about_component.dart';
@@ -22,7 +23,8 @@ class HomePage extends StatelessWidget {
           OverviewComponent(),
           AboutComponent(),
           SkillsComponent(),
-          ExperienceComponent()
+          ExperienceComponent(),
+          WorkComponent(),
         ],
       ),
     );

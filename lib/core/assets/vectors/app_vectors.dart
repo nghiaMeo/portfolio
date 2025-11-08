@@ -10,6 +10,7 @@ class AppVectors {
   static const linkedin = '${basePath}linkedin$format';
   static const twitter = '${basePath}twitter$format';
   static const logoCompany = '${basePath}logoCompany$format';
+  static const link = '${basePath}link$format';
 
   //vectors/lang/
   static const basePathLang = 'assets/vectors/lang/';
