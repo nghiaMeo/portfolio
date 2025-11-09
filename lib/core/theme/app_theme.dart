@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/core/theme/svg_theme.dart';
 import 'app_colors.dart';
 
 class AppTheme {
   static final light = ThemeData(
+    extensions: <ThemeExtension<dynamic>>[const SvgTheme()],
     brightness: Brightness.light,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.backgroundLightPrimary,
@@ -36,6 +38,9 @@ class AppTheme {
   );
 
   static final dark = ThemeData(
+      extensions: <ThemeExtension<dynamic>>[const SvgTheme(
+        color: AppColors.backgroundLightPrimary
+      )],
     brightness: Brightness.dark,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.backgroundDarkPrimary,

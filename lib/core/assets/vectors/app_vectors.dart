@@ -11,6 +11,9 @@ class AppVectors {
   static const twitter = '${basePath}twitter$format';
   static const logoCompany = '${basePath}logoCompany$format';
   static const link = '${basePath}link$format';
+  static const email = '${basePath}email$format';
+  static const phone = '${basePath}phone$format';
+  static const copy = '${basePath}copy$format';
 
   //vectors/lang/
   static const basePathLang = 'assets/vectors/lang/';
@@ -24,8 +27,4 @@ class AppVectors {
   static const git = '${basePathLang}git$format';
   static const docker = '${basePathLang}docker$format';
   static const postgreSql = '${basePathLang}postgreSql$format';
-
-
-
-
 }

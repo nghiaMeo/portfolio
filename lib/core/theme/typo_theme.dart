@@ -121,9 +121,14 @@ class TypoTheme {
     );
   }
 
-  static Widget regular20(BuildContext context, {required String text}) {
+  static Widget regular20(
+    BuildContext context, {
+    required String text,
+    TextAlign textAlign = TextAlign.start,
+  }) {
     return Text(
       text,
+      textAlign: textAlign,
       style: GoogleFonts.inter(
         textStyle: TextStyle(
           color: _contentColor(context),

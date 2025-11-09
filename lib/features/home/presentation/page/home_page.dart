@@ -5,6 +5,7 @@ import 'package:portfolio/features/home/presentation/component/work_component.da
 import 'package:portfolio/features/home/presentation/widgets/appbar_widget.dart';
 
 import '../component/about_component.dart';
+import '../component/contact_component.dart';
 import '../component/experience_component.dart';
 import '../component/overview_component.dart';
 
@@ -25,6 +26,7 @@ class HomePage extends StatelessWidget {
           SkillsComponent(),
           ExperienceComponent(),
           WorkComponent(),
+          ContactComponent(),
         ],
       ),
     );
