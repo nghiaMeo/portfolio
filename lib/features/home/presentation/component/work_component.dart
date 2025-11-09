@@ -13,6 +13,7 @@ class WorkComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isLightTheme = Theme.of(context).brightness == Brightness.light;
+
     return Container(
       color: isLightTheme
           ? AppColors.backgroundLightPrimary
@@ -38,139 +39,142 @@ class WorkComponent extends StatelessWidget {
               context,
               text: 'Some of the noteworthy projects I have built:',
             ),
+
             // list product
-            Container(  //product right
-              padding: const EdgeInsets.all(48),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: IntrinsicHeight(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    // Image preview
-                    ImageProductWidget(
-                      imageUrl: AppImages.avatar,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(12),
-                        bottomLeft: Radius.circular(12),
-                      ),
-                    ),
-                    Expanded(
-                      child: DescriptionProductWidget(
-                        title: "Just Do It",
-                        description:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                            " Maecenas nec urna ac tellus volutpat viverra. "
-                            "Vestibulum ante ipsum primis in faucibus orci "
-                            "luctus et ultrices posuere cubilia curae.",
-                        techs: [
-                          "Java",
-                          "Spring Boot",
-                          "MySql",
-                          "Docker",
-                          "VMWare",
-                        ],
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(12),
-                          bottomRight: Radius.circular(12),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            productImageLeft(
+              context,
+              image: AppImages.avatar,
+              title: "Just Do It 1",
+              description:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                  " Maecenas nec urna ac tellus volutpat viverra. "
+                  "Vestibulum ante ipsum primis in faucibus orci "
+                  "luctus et ultrices posuere cubilia curae.",
+              techs: ["Java", "Spring Boot", "MySql", "Docker", "VMWare"],
             ),
-            Container( //product left
-              padding: const EdgeInsets.all(48),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: IntrinsicHeight(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    // Image preview
-                    Expanded(
-                      child: DescriptionProductWidget(
-                        title: "Just Do It 1",
-                        description:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                            " Maecenas nec urna ac tellus volutpat viverra. "
-                            "Vestibulum ante ipsum primis in faucibus orci "
-                            "luctus et ultrices posuere cubilia curae.",
-                        techs: [
-                          "Java",
-                          "Spring Boot",
-                          "MySql",
-                          "Docker",
-                          "VMWare",
-                        ],
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(12),
-                          bottomLeft: Radius.circular(12),
-                        ),
-                      ),
-                    ),
-                    ImageProductWidget(
-                      imageUrl: AppImages.avatar,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(12),
-                        bottomRight: Radius.circular(12),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            productImageRight(
+              context,
+              image: AppImages.avatar,
+              title: "Just Do It 1",
+              description:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                  " Maecenas nec urna ac tellus volutpat viverra. "
+                  "Vestibulum ante ipsum primis in faucibus orci "
+                  "luctus et ultrices posuere cubilia curae.",
+              techs: ["Java", "Spring Boot", "MySql", "Docker", "VMWare"],
             ),
-            Container(  //product right
-              padding: const EdgeInsets.all(48),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: IntrinsicHeight(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    // Image preview
-                    ImageProductWidget(
-                      imageUrl: AppImages.avatar,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(12),
-                        bottomLeft: Radius.circular(12),
-                      ),
-                    ),
-                    Expanded(
-                      child: DescriptionProductWidget(
-                        title: "Just Do It 2",
-                        description:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                            " Maecenas nec urna ac tellus volutpat viverra. "
-                            "Vestibulum ante ipsum primis in faucibus orci "
-                            "luctus et ultrices posuere cubilia curae.",
-                        techs: [
-                          "Java",
-                          "Spring Boot",
-                          "MySql",
-                          "Docker",
-                          "VMWare",
-                        ],
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(12),
-                          bottomRight: Radius.circular(12),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            productImageLeft(
+              context,
+              image: AppImages.avatar,
+              title: "Just Do It 1",
+              description:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                  " Maecenas nec urna ac tellus volutpat viverra. "
+                  "Vestibulum ante ipsum primis in faucibus orci "
+                  "luctus et ultrices posuere cubilia curae.",
+              techs: ["Java", "Spring Boot", "MySql", "Docker", "VMWare"],
             ),
           ],
         ),
       ),
     );
   }
+}
+
+Widget productImageLeft(
+  BuildContext context, {
+  required String image,
+  required String title,
+  required String description,
+  required List<String> techs,
+}) {
+  return Container(
+    //product right
+    padding: const EdgeInsets.all(48),
+    decoration: BoxDecoration(
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.06),
+          blurRadius: 40,
+          offset: const Offset(0, 0),
+        ),
+      ],
+    ),
+    child: IntrinsicHeight(
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          // Image preview
+          ImageProductWidget(
+            imageUrl: AppImages.avatar,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(12),
+              bottomLeft: Radius.circular(12),
+            ),
+          ),
+          Expanded(
+            child: DescriptionProductWidget(
+              title: title,
+              description: description,
+              techs: techs,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(12),
+                bottomRight: Radius.circular(12),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget productImageRight(
+  BuildContext context, {
+  required String image,
+  required String title,
+  required String description,
+  required List<String> techs,
+}) {
+  return Container(
+    //product right
+    padding: const EdgeInsets.all(48),
+    decoration: BoxDecoration(
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.06),
+          blurRadius: 40,
+          offset: const Offset(0, 0),
+        ),
+      ],
+    ),
+    child: IntrinsicHeight(
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          // Image preview
+          Expanded(
+            child: DescriptionProductWidget(
+              title: title,
+              description: description,
+              techs: techs,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(12),
+                bottomLeft: Radius.circular(12),
+              ),
+            ),
+          ),
+          ImageProductWidget(
+            imageUrl: AppImages.avatar,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(12),
+              bottomRight: Radius.circular(12),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }
