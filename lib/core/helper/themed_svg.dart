@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart' as svg;
+import 'package:portfolio/core/theme/app_colors.dart';
 import 'package:portfolio/core/theme/svg_theme.dart';
 
 Widget themedSvg(
@@ -14,7 +15,9 @@ Widget themedSvg(
     width: size ?? svgTheme.size,
     height: size ?? svgTheme.size,
     colorFilter: ColorFilter.mode(
-      color ?? svgTheme.color ?? Colors.black,
+      color ??
+          AppColors.textContentDarkTheme ??
+          AppColors.textContentLightTheme,
       BlendMode.srcIn,
     ),
   );

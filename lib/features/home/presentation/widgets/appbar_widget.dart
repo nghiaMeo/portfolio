@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
+import 'package:portfolio/core/helper/themed_svg.dart';
 
 import 'package:provider/provider.dart';
 import '../../../../core/theme/theme_notifier.dart';
@@ -31,8 +32,8 @@ Widget appbarWidget(BuildContext context) {
                 onTap: () => themeNotifier.toggleTheme(),
                 child: Container(
                   child: themeNotifier.isDarkMode
-                      ? SvgPicture.asset(AppVectors.light)
-                      : SvgPicture.asset(AppVectors.night),
+                      ? themedSvg(context, AppVectors.light)
+                      : themedSvg(context, AppVectors.night),
                 ),
               );
             },

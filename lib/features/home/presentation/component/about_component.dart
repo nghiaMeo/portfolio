@@ -84,18 +84,11 @@ class AboutComponent extends StatelessWidget {
 Widget _avatarWidget(BuildContext context) {
   return Container(
     decoration: BoxDecoration(
-      boxShadow: [
-        BoxShadow(
-          color: AppColors.greyLight,
-          blurRadius: 12,
-          offset: Offset(0, 6),
-        ),
-      ],
       borderRadius: BorderRadius.circular(0),
     ),
     child: ClipRRect(
       borderRadius: BorderRadius.circular(0),
-      child: Image.asset(AppImages.avatar, width: 400, height: 480),
+      child: Image.asset(AppImages.avatar, width: 500,),
     ),
   );
 }

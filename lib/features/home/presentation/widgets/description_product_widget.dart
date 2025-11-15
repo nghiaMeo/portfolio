@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:portfolio/core/helper/themed_svg.dart';
 
 import '../../../../core/assets/vectors/app_vectors.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -15,7 +16,8 @@ class DescriptionProductWidget extends StatelessWidget {
     super.key,
     required this.title,
     required this.description,
-    required this.techs, required this.borderRadius,
+    required this.techs,
+    required this.borderRadius,
   });
 
   @override
@@ -62,7 +64,7 @@ class DescriptionProductWidget extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           // Open link button
-          InkWell(onTap: () {}, child: SvgPicture.asset(AppVectors.link)),
+          InkWell(onTap: () {}, child: themedSvg(context, AppVectors.link)),
         ],
       ),
     );

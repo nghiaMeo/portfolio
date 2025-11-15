@@ -7,6 +7,7 @@ import 'package:portfolio/features/home/presentation/widgets/appbar_widget.dart'
 import '../component/about_component.dart';
 import '../component/contact_component.dart';
 import '../component/experience_component.dart';
+import '../component/footer_component.dart';
 import '../component/overview_component.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,6 +28,7 @@ class HomePage extends StatelessWidget {
           ExperienceComponent(),
           WorkComponent(),
           ContactComponent(),
+          FooterComponent()
         ],
       ),
     );

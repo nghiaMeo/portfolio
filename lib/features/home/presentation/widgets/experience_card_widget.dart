@@ -64,11 +64,11 @@ class ExperienceCardWidget extends StatelessWidget {
                       children: descriptions
                           .map(
                             (desc) => Padding(
-                              padding: const EdgeInsets.only(bottom: 6),
+                              padding: const EdgeInsets.only(bottom: 10),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TypoTheme.regular18(context, text: "•"),
+                                  TypoTheme.regular18(context, text: "- "),
                                   Expanded(
                                     child: TypoTheme.regular16(
                                       context,

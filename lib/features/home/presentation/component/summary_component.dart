@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
+import 'package:portfolio/core/helper/themed_svg.dart';
 import 'package:portfolio/features/home/presentation/widgets/button_social_widget.dart';
 
 import '../../../../core/assets/images/app_images.dart';
@@ -12,6 +13,8 @@ class SummaryComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isLightTheme = Theme.of(context).brightness == Brightness.light;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 100),
       child: Row(
@@ -19,7 +22,18 @@ class SummaryComponent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Flexible(fit: FlexFit.tight, child: _descriptionWidget(context)),
-          Flexible(fit: FlexFit.loose, child: _avatarWidget(context)),
+          Flexible(
+            fit: FlexFit.loose,
+            child: _avatarWidget(
+              context,
+              fade: isLightTheme
+                  ? AppColors.greyLight
+                  : AppColors.greyDark,
+              midFade: isLightTheme
+                  ? AppColors.backgroundLightPrimary
+                  : AppColors.backgroundDarkPrimary,
+            ),
+          ),
         ],
       ),
     );
@@ -51,21 +65,70 @@ Widget _descriptionWidget(BuildContext context) {
   );
 }
 
-Widget _avatarWidget(BuildContext context) {
-  return Container(
-    decoration: BoxDecoration(
-      boxShadow: [
-        BoxShadow(
-          color: AppColors.greyLight,
-          blurRadius: 12,
-          offset: Offset(0, 6),
+Widget _avatarWidget(
+  BuildContext context, {
+  required Color fade,
+  required Color midFade,
+}) {
+  const double w = 280;
+  const double h = 320;
+  const double radius = 0;
+
+  return SizedBox(
+    width: w + 60,
+    height: h + 60,
+    child: Stack(
+      children: [
+        // Shadow layer 2 - far (grey)
+        Positioned(
+          top: 45,
+          left: 45,
+          child: Container(
+            width: w,
+            height: h,
+            decoration: BoxDecoration(
+              color: fade,
+              borderRadius: BorderRadius.circular(radius),
+            ),
+          ),
+        ),
+
+        // Shadow layer 1 - near (white)
+        Positioned(
+          top: 20,
+          left: 15,
+          child: Container(
+            width: w,
+            height: h,
+            decoration: BoxDecoration(
+              color: midFade,
+              borderRadius: BorderRadius.circular(radius),
+            ),
+          ),
+        ),
+
+        // Main image
+        Positioned(
+          top: 0,
+          left: 0,
+          child: Container(
+            width: w,
+            height: h,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(radius),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(radius),
+              child: Image.asset(
+                AppImages.avatar,
+                width: w,
+                height: h,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
         ),
       ],
-      borderRadius: BorderRadius.circular(0),
-    ),
-    child: ClipRRect(
-      borderRadius: BorderRadius.circular(0),
-      child: Image.asset(AppImages.avatar, width: 280, height: 320),
     ),
   );
 }
@@ -73,7 +136,7 @@ Widget _avatarWidget(BuildContext context) {
 Widget _livingWidget(BuildContext context) {
   return Row(
     children: [
-      SvgPicture.asset(AppVectors.location),
+      themedSvg(context, AppVectors.location),
       SizedBox(width: 10),
       TypoTheme.regular16(context, text: "Ho Chi Minh City, Vietnam"),
     ],
@@ -97,15 +160,15 @@ Widget _socialMediaWidget(BuildContext context) {
     children: [
       buttonSocialWidget(
         context,
-        SvgPicture.asset(AppVectors.github),
+        themedSvg(context, AppVectors.github),
         'https://github.com/nghiaMeo',
       ),
       SizedBox(width: 5),
-      buttonSocialWidget(context, SvgPicture.asset(AppVectors.twitter), ''),
+      buttonSocialWidget(context, themedSvg(context, AppVectors.twitter), ''),
       SizedBox(width: 10),
       buttonSocialWidget(
         context,
-        SvgPicture.asset(AppVectors.linkedin),
+        themedSvg(context, AppVectors.linkedin),
         'https://www.linkedin.com/in/nghianguyen2001/',
       ),
     ],

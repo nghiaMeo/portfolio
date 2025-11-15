@@ -7,6 +7,7 @@ import 'package:portfolio/core/assets/vectors/app_vectors.dart';
 import '../../../../core/helper/themed_svg.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/typo_theme.dart';
+import '../widgets/button_social_widget.dart';
 import '../widgets/title_component_widget.dart';
 
 class ContactComponent extends StatelessWidget {
@@ -24,7 +25,7 @@ class ContactComponent extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 100),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 100),
             Center(
@@ -55,6 +56,12 @@ class ContactComponent extends StatelessWidget {
               contact: "+84 339941057",
               svgIcon: AppVectors.phone,
             ),
+            SizedBox(height: 40 ),
+            TypoTheme.regular16(
+              context,
+              text: "You may also find me on these platforms!",
+            ),
+            Center(child: _socialMediaWidget(context)),
             SizedBox(height: 50),
           ],
         ),
@@ -91,5 +98,31 @@ Widget contactWidget(
         ),
       ],
     ),
+  );
+}
+
+Widget _socialMediaWidget(BuildContext context) {
+  return Row(
+    spacing: 1,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      buttonSocialWidget(
+        context,
+        themedSvg(context, AppVectors.github, size: 30),
+        'https://github.com/nghiaMeo',
+      ),
+      SizedBox(width: 5),
+      buttonSocialWidget(
+        context,
+        themedSvg(context, AppVectors.twitter, size: 30),
+        '',
+      ),
+      SizedBox(width: 10),
+      buttonSocialWidget(
+        context,
+        themedSvg(context, AppVectors.linkedin, size: 20),
+        'https://www.linkedin.com/in/nghianguyen2001/',
+      ),
+    ],
   );
 }
