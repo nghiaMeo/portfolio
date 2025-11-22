@@ -27,4 +27,10 @@ class AppVectors {
   static const git = '${basePathLang}git$format';
   static const docker = '${basePathLang}docker$format';
   static const postgreSql = '${basePathLang}postgreSql$format';
+  static const dropdown = '${basePathLang}dropdown$format';
+
+  //vectors/flags/
+  static const basePathFlags = 'assets/vectors/flags/';
+  static const vn = '${basePathFlags}vn$format';
+  static const us = '${basePathFlags}us$format';
 }

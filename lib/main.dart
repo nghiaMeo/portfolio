@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'core/theme/theme_notifier.dart';
 import 'core/theme/app_theme.dart';
 import 'features/home/presentation/page/home_page.dart';
+import 'l10n/l10n.dart';
 
 void main() {
   runApp(
@@ -21,7 +22,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
@@ -32,6 +32,8 @@ class _MyAppState extends State<MyApp> {
       curve: Curves.easeInOut,
       data: isDark ? ThemeData.dark() : ThemeData.light(),
       child: MaterialApp(
+        locale: Locale('en'),
+        supportedLocales: L10n.all,
         debugShowCheckedModeBanner: false,
         title: "Portfolio",
         theme: AppTheme.light,

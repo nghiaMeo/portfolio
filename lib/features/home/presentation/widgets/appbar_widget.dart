@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
 import 'package:portfolio/core/helper/themed_svg.dart';
+import 'package:portfolio/features/home/presentation/widgets/dropdown_language.dart';
 
 import 'package:provider/provider.dart';
 import '../../../../core/theme/theme_notifier.dart';
@@ -24,6 +25,7 @@ Widget appbarWidget(BuildContext context) {
           TypoTheme.medium16(context, text: "Testimonials"),
         ),
         itemTitleWidget(context, TypoTheme.medium16(context, text: "Contact")),
+
         itemTitleWidget(
           context,
           Consumer<ThemeNotifier>(
@@ -39,6 +41,8 @@ Widget appbarWidget(BuildContext context) {
             },
           ),
         ),
+        dropdownLanguage(context),
+
         itemTitleWidget(context, buttonDownload(context, "Download CV")),
         // listTitleWidget(context, ),
       ],
