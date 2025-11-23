@@ -1,14 +1,5 @@
 {
   "@@locale": "en",
-  "hello": "Hello",
-  "changeLanguage": "Change language",
-  "welcome": "Welcome, {name}!",
-  "@welcome": {
-    "description": "Greeting with user name",
-    "placeholders": {
-      "name": {}
-    }
-  },
   "about": "About",
   "work": "Work",
   "testimonials": "Testimonials",

@@ -1,14 +1,6 @@
 {
   "@@locale": "vi",
-  "hello": "Xin chào",
-  "changeLanguage": "Đổi ngôn ngữ",
-  "welcome": "Chào, {name}!",
-  "@welcome": {
-    "description": "Greeting with user name",
-    "placeholders": {
-      "name": {}
-    }
-  },
+
   "about": "Giới thiệu",
   "work": "Dự án",
   "testimonials": "Đánh giá",
