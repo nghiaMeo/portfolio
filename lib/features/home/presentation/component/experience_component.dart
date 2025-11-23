@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
+import 'package:portfolio/core/localization/app_localzations.dart';
 import 'package:portfolio/features/home/presentation/widgets/experience_card_widget.dart';
 import 'package:portfolio/features/home/presentation/widgets/title_component_widget.dart';
 
@@ -24,13 +25,13 @@ class ExperienceComponent extends StatelessWidget {
           SizedBox(height: 100),
           titleComponentWidget(
             context,
-            text: 'Experience',
+            text: AppLocalizations.of(context).experience,
             appColors: isLightTheme ? AppColors.greyLight : AppColors.greyDark,
           ),
           SizedBox(height: 10),
           TypoTheme.regular20(
             context,
-            text: 'Here is a quick summary of my most recent experiences:',
+            text: AppLocalizations.of(context).experienceDescription,
           ),
           SizedBox(height: 40),
           ExperienceCardWidget(

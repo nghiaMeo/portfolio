@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/localization/app_localzations.dart';
 import 'package:portfolio/core/theme/typo_theme.dart';
 
 import '../../../../core/assets/images/app_images.dart';
@@ -24,7 +25,7 @@ class AboutComponent extends StatelessWidget {
           Center(
             child: titleComponentWidget(
               context,
-              text: "About me",
+              text: AppLocalizations.of(context).aboutMe,
               appColors: isLightTheme
                   ? AppColors.greyLight
                   : AppColors.greyDark,
@@ -43,30 +44,11 @@ class AboutComponent extends StatelessWidget {
                   children: [
                     TypoTheme.semiBold30(
                       context,
-                      text: 'Curious about me? Here you have it:',
+                      text: AppLocalizations.of(context).curiousAboutMe,
                     ),
                     TypoTheme.regular16(
                       context,
-                      text:
-                          "I'm a passionate, self-proclaimed designer who "
-                          "specializes in full stack development (React.js "
-                          "& Node.js). I am very enthusiastic about bringing "
-                          "the technical and visual aspects of digital "
-                          "products to life. User experience, pixel perfect "
-                          "design, and writing clear, readable, highly "
-                          "performant code matters to me. \n\n"
-                          "I began my journey as a web developer in 2015,"
-                          " and since then, I've continued to grow and "
-                          "evolve as a developer, taking on new challenges "
-                          "and learning the latest technologies along the "
-                          "way. Now, in my early thirties, 7 years after "
-                          "starting my web development journey, I'm building"
-                          " cutting-edge web applications using modern "
-                          "technologies such as Next.js, TypeScript, Nestjs, "
-                          "Tailwindcss, Supabase and much more. \n \n "
-                          "I am very much a progressive thinker and enjoy "
-                          "working on products end to end, from ideation "
-                          "all the way to development.",
+                      text: AppLocalizations.of(context).aboutDescription,
                     ),
                   ],
                 ),

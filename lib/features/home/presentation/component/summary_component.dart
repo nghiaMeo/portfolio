@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
 import 'package:portfolio/core/helper/themed_svg.dart';
+import 'package:portfolio/core/localization/app_localzations.dart';
 import 'package:portfolio/features/home/presentation/widgets/button_social_widget.dart';
 
 import '../../../../core/assets/images/app_images.dart';
@@ -41,19 +42,14 @@ class SummaryComponent extends StatelessWidget {
 }
 
 Widget _descriptionWidget(BuildContext context) {
+  final l10n = AppLocalizations.of(context);
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      TypoTheme.bold60(context, text: "Hi, I'm Nghia Meo 👋"),
+      TypoTheme.bold60(context, text: l10n.hiImNghia),
       TypoTheme.regular16(
         context,
-        text:
-            "I'm a full stack developer (React.js & Node.js) with a focus on "
-            "creating (and occasionally designing) exceptional digital "
-            "experiences that are fast, accessible, visually appealing, "
-            "and responsive. Even though I have been creating web "
-            "applications for over 7 years, I still love it as if it was "
-            "something new.",
+        text: l10n.summaryDescription,
       ),
       SizedBox(height: 50),
       _livingWidget(context),
@@ -134,21 +130,23 @@ Widget _avatarWidget(
 }
 
 Widget _livingWidget(BuildContext context) {
+  final l10n = AppLocalizations.of(context);
   return Row(
     children: [
       themedSvg(context, AppVectors.location),
       SizedBox(width: 10),
-      TypoTheme.regular16(context, text: "Ho Chi Minh City, Vietnam"),
+      TypoTheme.regular16(context, text: l10n.location),
     ],
   );
 }
 
 Widget _availableWidget(BuildContext context) {
+  final l10n = AppLocalizations.of(context);
   return Row(
     children: [
       SvgPicture.asset(AppVectors.dot),
       SizedBox(width: 10),
-      TypoTheme.regular16(context, text: "Available for new projects"),
+      TypoTheme.regular16(context, text: l10n.availableForProjects),
     ],
   );
 }

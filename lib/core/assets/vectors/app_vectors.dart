@@ -15,8 +15,8 @@ class AppVectors {
   static const phone = '${basePath}phone$format';
   static const copy = '${basePath}copy$format';
 
-  //vectors/lang/
-  static const basePathLang = 'assets/vectors/lang/';
+  //vectors/techs/
+  static const basePathLang = 'assets/vectors/techs/';
   static const flutter = '${basePathLang}flutter$format';
   static const java = '${basePathLang}java$format';
   static const python = '${basePathLang}python$format';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/localization/app_localzations.dart';
 import 'package:portfolio/core/theme/typo_theme.dart';
 
 
@@ -24,7 +25,7 @@ class FooterComponent extends StatelessWidget {
           children: [
             TypoTheme.regular16(
               context,
-              text: "2025 | Coded with ❤️️ by Nguyen Huu Nghia",
+              text: AppLocalizations.of(context).footerText,
             ),
           ],
         ),

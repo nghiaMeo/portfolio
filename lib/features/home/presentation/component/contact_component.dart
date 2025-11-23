@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
+import 'package:portfolio/core/localization/app_localzations.dart';
 
 import '../../../../core/helper/themed_svg.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -31,7 +32,7 @@ class ContactComponent extends StatelessWidget {
             Center(
               child: titleComponentWidget(
                 context,
-                text: "Get in touch",
+                text: AppLocalizations.of(context).getInTouch,
                 appColors: isLightTheme
                     ? AppColors.greyLight
                     : AppColors.greyDark,
@@ -41,9 +42,7 @@ class ContactComponent extends StatelessWidget {
             TypoTheme.regular20(
               context,
               textAlign: TextAlign.center,
-              text:
-                  'What’s next? Feel free to reach out to me if you\'re looking '
-                  'for a developer, have a query, or simply want to connect.',
+              text: AppLocalizations.of(context).contactDescription,
             ),
             SizedBox(height: 20),
             contactWidget(
@@ -59,7 +58,7 @@ class ContactComponent extends StatelessWidget {
             SizedBox(height: 40 ),
             TypoTheme.regular16(
               context,
-              text: "You may also find me on these platforms!",
+              text: AppLocalizations.of(context).findMeOnPlatforms,
             ),
             Center(child: _socialMediaWidget(context)),
             SizedBox(height: 50),
@@ -89,7 +88,7 @@ Widget contactWidget(
           onTap: () {
             Clipboard.setData(ClipboardData(text: contact));
             Fluttertoast.showToast(
-              msg: "Copied!",
+              msg: AppLocalizations.of(context).copied,
               backgroundColor: AppColors.greyDark,
               webBgColor: "#606060",
             );

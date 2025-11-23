@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
 import 'package:portfolio/core/helper/themed_svg.dart';
+import 'package:portfolio/core/localization/app_localzations.dart';
 import 'package:portfolio/features/home/presentation/widgets/dropdown_language.dart';
 
 import 'package:provider/provider.dart';
@@ -12,19 +13,20 @@ import 'item_title_widget.dart';
 
 Widget appbarWidget(BuildContext context) {
   final themeNotifier = Provider.of<ThemeNotifier>(context);
+  final l10n = AppLocalizations.of(context);
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 100),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        itemTitleWidget(context, TypoTheme.medium16(context, text: "About")),
-        itemTitleWidget(context, TypoTheme.medium16(context, text: "Work")),
+        itemTitleWidget(context, TypoTheme.medium16(context, text: l10n.about)),
+        itemTitleWidget(context, TypoTheme.medium16(context, text: l10n.work)),
         itemTitleWidget(
           context,
-          TypoTheme.medium16(context, text: "Testimonials"),
+          TypoTheme.medium16(context, text: l10n.testimonials),
         ),
-        itemTitleWidget(context, TypoTheme.medium16(context, text: "Contact")),
+        itemTitleWidget(context, TypoTheme.medium16(context, text: l10n.contact)),
 
         itemTitleWidget(
           context,
@@ -43,7 +45,7 @@ Widget appbarWidget(BuildContext context) {
         ),
         dropdownLanguage(context),
 
-        itemTitleWidget(context, buttonDownload(context, "Download CV")),
+        itemTitleWidget(context, buttonDownload(context, l10n.downloadCv)),
         // listTitleWidget(context, ),
       ],
     ),

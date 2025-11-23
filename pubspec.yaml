@@ -13,6 +13,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   provider: ^6.1.5+1
   google_fonts: ^6.3.2
   flutter_svg: ^2.2.1
@@ -33,8 +35,10 @@ flutter:
   generate: true
   assets:
     - assets/vectors/
-    - assets/vectors/lang/
+    - assets/vectors/techs/
     - assets/images/
+    - lib/l10n/app_en.arb
+    - lib/l10n/app_vi.arb
 
 
   uses-material-design: true

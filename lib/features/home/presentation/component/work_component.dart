@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/assets/images/app_images.dart';
+import 'package:portfolio/core/localization/app_localzations.dart';
 import 'package:portfolio/features/home/presentation/widgets/description_product_widget.dart';
 import 'package:portfolio/features/home/presentation/widgets/image_product_widget.dart';
 
@@ -28,7 +29,7 @@ class WorkComponent extends StatelessWidget {
             Center(
               child: titleComponentWidget(
                 context,
-                text: "Work",
+                text: AppLocalizations.of(context).work,
                 appColors: isLightTheme
                     ? AppColors.greyLight
                     : AppColors.greyDark,
@@ -37,7 +38,7 @@ class WorkComponent extends StatelessWidget {
             SizedBox(height: 10),
             TypoTheme.regular20(
               context,
-              text: 'Some of the noteworthy projects I have built:',
+              text: AppLocalizations.of(context).workDescription,
             ),
 
             // list product

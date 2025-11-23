@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/localization/app_localzations.dart';
 import 'package:portfolio/core/theme/typo_theme.dart';
 import 'package:portfolio/features/home/presentation/component/skills_component.dart';
 import 'package:portfolio/features/home/presentation/component/work_component.dart';
@@ -15,9 +16,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: TypoTheme.regular16(context, text: "Jimmy Nguyen"),
+        title: TypoTheme.regular16(context, text: l10n.appName),
         actions: [appbarWidget(context)],
       ),
       body: ListView(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
+import 'package:portfolio/core/localization/app_localzations.dart';
 import 'package:portfolio/core/theme/typo_theme.dart';
 import 'package:portfolio/features/home/presentation/widgets/title_component_widget.dart';
 
@@ -44,7 +45,7 @@ class _SkillsComponentState extends State<SkillsComponent> {
             Center(
               child: titleComponentWidget(
                 context,
-                text: "Skills",
+                text: AppLocalizations.of(context).skills,
                 appColors: isLightTheme
                     ? AppColors.greyLight
                     : AppColors.greyDark,
@@ -53,7 +54,7 @@ class _SkillsComponentState extends State<SkillsComponent> {
             SizedBox(height: 10),
             TypoTheme.regular20(
               context,
-              text: 'The skills, tools and technologies I am really good at:',
+              text: AppLocalizations.of(context).skillsDescription,
             ),
             SizedBox(height: 80),
             _gridSkillsWidget(context, techList),
