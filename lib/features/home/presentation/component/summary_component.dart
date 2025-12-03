@@ -162,7 +162,7 @@ Widget _socialMediaWidget(BuildContext context) {
         'https://github.com/nghiaMeo',
       ),
       SizedBox(width: 5),
-      buttonSocialWidget(context, themedSvg(context, AppVectors.twitter), ''),
+      buttonSocialWidget(context, themedSvg(context, AppVectors.facebook,size: 24), 'https://www.facebook.com/Noerean181032'),
       SizedBox(width: 10),
       buttonSocialWidget(
         context,

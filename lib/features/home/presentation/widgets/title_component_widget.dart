@@ -9,7 +9,7 @@ Widget titleComponentWidget(
   return IntrinsicWidth(
     child: IntrinsicHeight(
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 5),
         decoration: BoxDecoration(
           color: appColors,
           borderRadius: BorderRadius.circular(18),

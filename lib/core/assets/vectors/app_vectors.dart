@@ -8,7 +8,7 @@ class AppVectors {
   static const dot = '${basePath}dot$format';
   static const github = '${basePath}github$format';
   static const linkedin = '${basePath}linkedin$format';
-  static const twitter = '${basePath}twitter$format';
+  static const facebook = '${basePath}facebook$format';
   static const logoCompany = '${basePath}logoCompany$format';
   static const link = '${basePath}link$format';
   static const email = '${basePath}email$format';

@@ -7,14 +7,15 @@ import 'core/theme/theme_notifier.dart';
 import 'core/theme/app_theme.dart';
 import 'features/home/presentation/page/home_page.dart';
 
-void main() {
+void main()  async{
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeNotifier()),
         ChangeNotifierProvider(create: (_) => LanguageNotifier()),
       ],
-      child: const MyApp(),
+      child: MyApp(),
     ),
   );
 }

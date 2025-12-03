@@ -113,8 +113,8 @@ Widget _socialMediaWidget(BuildContext context) {
       SizedBox(width: 5),
       buttonSocialWidget(
         context,
-        themedSvg(context, AppVectors.twitter, size: 30),
-        '',
+        themedSvg(context, AppVectors.facebook, size: 24),
+        'https://www.facebook.com/Noerean181032',
       ),
       SizedBox(width: 10),
       buttonSocialWidget(

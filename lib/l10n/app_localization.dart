@@ -98,24 +98,6 @@ abstract class AppLocalizations {
     Locale('vi'),
   ];
 
-  /// No description provided for @hello.
-  ///
-  /// In en, this message translates to:
-  /// **'Hello'**
-  String get hello;
-
-  /// No description provided for @changeLanguage.
-  ///
-  /// In en, this message translates to:
-  /// **'Change language'**
-  String get changeLanguage;
-
-  /// Greeting with user name
-  ///
-  /// In en, this message translates to:
-  /// **'Welcome, {name}!'**
-  String welcome(Object name);
-
   /// No description provided for @about.
   ///
   /// In en, this message translates to:

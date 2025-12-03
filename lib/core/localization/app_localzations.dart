@@ -46,14 +46,7 @@ class AppLocalizations {
     return _localizationStrings[key] ?? key;
   }
 
-  // Getter methods for translations
-  // String get hello => translate(L10nKeys.hello);
-  // String get changeLanguage => translate(L10nKeys.changeLanguage);
-  // String welcome(String name) {
-  //   String template = translate(L10nKeys.welcome);
-  //   return template.replaceAll('{name}', name);
-  // }
-  
+
   // Navigation
   String get about => translate(L10nKeys.about);
   String get work => translate(L10nKeys.work);

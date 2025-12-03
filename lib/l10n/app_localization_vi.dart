@@ -9,17 +9,6 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get hello => 'Xin chào';
-
-  @override
-  String get changeLanguage => 'Đổi ngôn ngữ';
-
-  @override
-  String welcome(Object name) {
-    return 'Chào, $name!';
-  }
-
-  @override
   String get about => 'Giới thiệu';
 
   @override

@@ -18,57 +18,72 @@ class ExperienceComponent extends StatelessWidget {
       color: isLightTheme
           ? AppColors.backgroundLightSecond
           : AppColors.backgroundDarkSecond,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(height: 100),
-          titleComponentWidget(
-            context,
-            text: AppLocalizations.of(context).experience,
-            appColors: isLightTheme ? AppColors.greyLight : AppColors.greyDark,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 80.0, horizontal: 16.0),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 900),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                // Chip "Experience"
+                Align(
+                  alignment: Alignment.center,
+                  child: titleComponentWidget(
+                    context,
+                    text: AppLocalizations.of(context).experience,
+                    appColors:
+                        isLightTheme ? AppColors.greyLight : AppColors.greyDark,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                // Mô tả ngắn
+                Align(
+                  alignment: Alignment.center,
+                  child: TypoTheme.regular20(
+                    context,
+                    text: AppLocalizations.of(context).experienceDescription,
+                  ),
+                ),
+                const SizedBox(height: 32),
+                // Các card kinh nghiệm
+                ExperienceCardWidget(
+                  companyLogo: AppVectors.logoCompany,
+                  companyName: "Upwork",
+                  position: "Sr. Frontend Developer",
+                  time: "Nov 2021 - Present",
+                  descriptions: [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "Ut pretium arcu et massa semper, id fringilla leo semper.",
+                    "Sed quis justo ac magna.",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                  ],
+                ),
+                ExperienceCardWidget(
+                  companyLogo: AppVectors.logoCompany,
+                  companyName: "Upwork",
+                  position: "Team Lead",
+                  time: "Jul 2017 - Oct 2021",
+                  descriptions: [
+                    "Sed quis justo ac magna.",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "Sed quis justo ac magna.",
+                  ],
+                ),
+                ExperienceCardWidget(
+                  companyLogo: AppVectors.logoCompany,
+                  companyName: "Upwork",
+                  position: "Full Stack Developer",
+                  time: "Dec 2015 - May 2017",
+                  descriptions: [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                  ],
+                ),
+              ],
+            ),
           ),
-          SizedBox(height: 10),
-          TypoTheme.regular20(
-            context,
-            text: AppLocalizations.of(context).experienceDescription,
-          ),
-          SizedBox(height: 40),
-          ExperienceCardWidget(
-            companyLogo: AppVectors.logoCompany,
-            companyName: "Nghia",
-            position: "Developer",
-            time: "25/10/2024 - Present",
-            descriptions: [
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-              "Ut pretium arcu et massa semper, id fringilla leo semper.",
-            ],
-          ),
-          const SizedBox(height: 20),
-          ExperienceCardWidget(
-            companyLogo: AppVectors.logoCompany,
-            companyName: "Nghia",
-            position: "Developer",
-            time: "25/10/2024 - Present",
-            descriptions: [
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-              "Ut pretium arcu et massa semper, id fringilla leo semper.",
-            ],
-          ),
-          const SizedBox(height: 20),
-          ExperienceCardWidget(
-            companyLogo: AppVectors.logoCompany,
-            companyName: "Nghia",
-            position: "Developer",
-            time: "25/10/2024 - Present",
-            descriptions: [
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-              "Ut pretium arcu et massa semper, id fringilla leo semper.",
-            ],
-          ),
-          const SizedBox(height: 20),
-
-        ],
+        ),
       ),
     );
   }

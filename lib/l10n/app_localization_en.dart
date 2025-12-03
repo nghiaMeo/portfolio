@@ -9,17 +9,6 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get hello => 'Hello';
-
-  @override
-  String get changeLanguage => 'Change language';
-
-  @override
-  String welcome(Object name) {
-    return 'Welcome, $name!';
-  }
-
-  @override
   String get about => 'About';
 
   @override
