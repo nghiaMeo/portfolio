@@ -31,7 +31,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get summaryDescription =>
-      'Tôi là một full stack developer (React.js & Node.js) với trọng tâm là tạo ra những trải nghiệm kỹ thuật số đặc biệt nhanh chóng, dễ tiếp cận, đẹp mắt và phản hồi. Mặc dù tôi đã tạo các ứng dụng web hơn 7 năm, tôi vẫn yêu thích nó như thể đó là điều gì đó mới mẻ.';
+      'Tôi là một kỹ sư Công nghệ Thông tin mới tốt nghiệp với nền tảng vững chắc về phát triển phần mềm. Tôi có kinh nghiệm thực hiện các dự án sử dụng Flutter và Java Spring Boot. Bên cạnh đó, tôi cũng đã tìm hiểu và nghiên cứu về AI và IoT trong quá trình làm nghiên cứu khoa học và khóa luận tốt nghiệp.\n\nTôi đang tìm kiếm một môi trường nơi mình có thể toàn tâm học hỏi, phát triển và theo đuổi đam mê công nghệ của mình.';
 
   @override
   String get location => 'Thành phố Hồ Chí Minh, Việt Nam';
@@ -47,14 +47,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get aboutDescription =>
-      'Tôi là một nhà thiết kế đam mê, tự nhận chuyên về phát triển full stack (React.js & Node.js). Tôi rất nhiệt tình trong việc mang lại các khía cạnh kỹ thuật và thị giác của sản phẩm kỹ thuật số vào cuộc sống. Trải nghiệm người dùng, thiết kế pixel hoàn hảo, và viết code rõ ràng, dễ đọc, hiệu suất cao là điều quan trọng đối với tôi. \n\nTôi bắt đầu hành trình của mình như một web developer vào năm 2015, và kể từ đó, tôi tiếp tục phát triển và tiến hóa như một developer, đảm nhận những thách thức mới và học các công nghệ mới nhất trên đường đi. Bây giờ, ở độ tuổi ba mươi, 7 năm sau khi bắt đầu hành trình phát triển web của mình, tôi đang xây dựng các ứng dụng web tiên tiến sử dụng các công nghệ hiện đại như Next.js, TypeScript, Nestjs, Tailwindcss, Supabase và nhiều hơn nữa. \n \nTôi là một người suy nghĩ tiến bộ và thích làm việc trên các sản phẩm từ đầu đến cuối, từ ý tưởng cho đến phát triển.';
+      'Tôi là một kỹ sư Công nghệ Thông tin với chuyên môn trong lĩnh vực lập trình ứng dụng mobile và phát triển ứng dụng web bằng Flutter và Java Spring Boot. Tôi luôn nhiệt huyết và đam mê với công việc phát triển phần mềm, đặc biệt là quá trình xây dựng và hoàn thiện các ứng dụng.\n\nTôi bắt đầu học lập trình từ năm 2019 khi bước vào đại học. Trong suốt quá trình học, cùng với 3 tháng thực tập tại doanh nghiệp vào tháng 10/2023, tôi đã tích lũy được nhiều kinh nghiệm thực tế và hiểu rõ hơn về quy trình phát triển phần mềm. Tôi tiếp tục trau dồi kỹ năng, nâng cao khả năng giải quyết vấn đề và luôn tìm kiếm một môi trường để có thể cống hiến và phát triển niềm đam mê của mình cùng với công ty.\n\nNăm 2025, tôi bắt đầu thực hiện Nghĩa Vụ Quân Sự, vì vậy tạm thời gián đoạn sự nghiệp. Tuy nhiên, trong thời gian này, tôi vẫn duy trì việc học tập và luyện tập kỹ năng lập trình mỗi ngày. Sau khi hoàn thành nghĩa vụ, tôi mong muốn được quay lại thị trường lao động với vai trò lập trình viên trong lĩnh vực phát triển phần mềm hoặc ứng dụng web.\n\nTôi là người có tư duy cầu tiến, thích làm việc trên sản phẩm từ giai đoạn ý tưởng cho đến khi hoàn thiện, và luôn nỗ lực để tạo ra những sản phẩm có giá trị.';
 
   @override
   String get skills => 'Kỹ năng';
 
   @override
-  String get skillsDescription =>
-      'Các kỹ năng, công cụ và công nghệ tôi thực sự giỏi:';
+  String get skillsDescription => 'Kỹ năng và Công nghệ của tôi:';
 
   @override
   String get experience => 'Kinh nghiệm';
@@ -82,4 +81,38 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get footerText => '2025 | Được code với ❤️️ bởi Nguyen Huu Nghia';
+
+  @override
+  String get nameCompany1 => 'Di4L';
+
+  @override
+  String get descriptionCompany1Line1 =>
+      'Thực hiện các nhiệm vụ và chỉnh sửa giao diện người dùng (UI) của ứng dụng bán hàng của công ty, đồng thời commit mã nguồn lên GitLab của công ty.';
+
+  @override
+  String get descriptionCompany1Line2 =>
+      'Chuẩn bị báo cáo tóm tắt tiến độ công việc hàng tuần và một báo cáo cuối khóa thực tập.';
+
+  @override
+  String get position1 => 'Thực tập sinh Flutter';
+
+  @override
+  String get time1 => 'Tháng 9/2023 - Tháng 11/2023';
+
+  @override
+  String get nameCompany2 => 'VietMap';
+
+  @override
+  String get descriptionCompany2Line1 =>
+      'Thực hiện một luồng chức năng (flow) tạo hợp đồng cho bên mua và bên bán của công ty, bao gồm chữ ký số khi hoàn tất hợp đồng, sử dụng công cụ Microsoft Power Automate';
+
+  @override
+  String get descriptionCompany2Line2 =>
+      'Thực hiện chức năng tạo đơn hàng trong CRM Bitrix24 và thông báo cho các phòng ban liên quan của công ty.';
+
+  @override
+  String get position2 => 'Thực tập sinh phát triển RPA';
+
+  @override
+  String get time2 => 'Tháng 6/2023 - Tháng 8/2023';
 }

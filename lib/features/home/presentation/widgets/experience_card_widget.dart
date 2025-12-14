@@ -26,7 +26,7 @@ class ExperienceCardWidget extends StatelessWidget {
     return IntrinsicWidth(
       child: IntrinsicHeight(
         child: Container(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(30),
           margin: const EdgeInsets.symmetric(vertical: 10),
           decoration: BoxDecoration(
             color: isLightTheme
@@ -47,7 +47,14 @@ class ExperienceCardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              SvgPicture.asset(companyLogo, fit: BoxFit.contain),
+              Center(
+                child: Image.asset(
+                  companyLogo,
+                  fit: BoxFit.contain,
+                  width: 100,
+                  height: 100,
+                ),
+              ),
               SizedBox(width: 100),
               Expanded(
                 child: Column(
@@ -68,7 +75,6 @@ class ExperienceCardWidget extends StatelessWidget {
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TypoTheme.regular18(context, text: "- "),
                                   Expanded(
                                     child: TypoTheme.regular16(
                                       context,

@@ -4,4 +4,6 @@ class AppImages {
 
   static const vn = '${basePath}vn.png';
   static const us = '${basePath}us.png';
+  static const di4l = '${basePath}di4l.jpg';
+  static const vietMap = '${basePath}vietMap.png';
 }

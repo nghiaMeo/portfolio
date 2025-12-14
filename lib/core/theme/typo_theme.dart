@@ -38,6 +38,7 @@ class TypoTheme {
 
   static Widget medium16(BuildContext context, {required String text}) {
     return Text(
+      textAlign: TextAlign.center,
       text,
       style: GoogleFonts.inter(
         textStyle: TextStyle(

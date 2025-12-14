@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/assets/images/app_images.dart';
 import 'package:portfolio/core/assets/vectors/app_vectors.dart';
 import 'package:portfolio/core/localization/app_localzations.dart';
 import 'package:portfolio/features/home/presentation/widgets/experience_card_widget.dart';
@@ -32,8 +33,9 @@ class ExperienceComponent extends StatelessWidget {
                   child: titleComponentWidget(
                     context,
                     text: AppLocalizations.of(context).experience,
-                    appColors:
-                        isLightTheme ? AppColors.greyLight : AppColors.greyDark,
+                    appColors: isLightTheme
+                        ? AppColors.greyLight
+                        : AppColors.greyDark,
                   ),
                 ),
                 const SizedBox(height: 12),
@@ -48,36 +50,23 @@ class ExperienceComponent extends StatelessWidget {
                 const SizedBox(height: 32),
                 // Các card kinh nghiệm
                 ExperienceCardWidget(
-                  companyLogo: AppVectors.logoCompany,
-                  companyName: "Upwork",
-                  position: "Sr. Frontend Developer",
-                  time: "Nov 2021 - Present",
+                  companyLogo: AppImages.di4l,
+                  companyName: AppLocalizations.of(context).nameCompany1,
+                  position: AppLocalizations.of(context).position1,
+                  time: AppLocalizations.of(context).time1,
                   descriptions: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Ut pretium arcu et massa semper, id fringilla leo semper.",
-                    "Sed quis justo ac magna.",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    AppLocalizations.of(context).descriptionCompany1Line1,
+                    AppLocalizations.of(context).descriptionCompany1Line2,
                   ],
                 ),
                 ExperienceCardWidget(
-                  companyLogo: AppVectors.logoCompany,
-                  companyName: "Upwork",
-                  position: "Team Lead",
-                  time: "Jul 2017 - Oct 2021",
+                  companyLogo: AppImages.vietMap,
+                  companyName: AppLocalizations.of(context).nameCompany2,
+                  position: AppLocalizations.of(context).position2,
+                  time: AppLocalizations.of(context).time2,
                   descriptions: [
-                    "Sed quis justo ac magna.",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Sed quis justo ac magna.",
-                  ],
-                ),
-                ExperienceCardWidget(
-                  companyLogo: AppVectors.logoCompany,
-                  companyName: "Upwork",
-                  position: "Full Stack Developer",
-                  time: "Dec 2015 - May 2017",
-                  descriptions: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    AppLocalizations.of(context).descriptionCompany2Line1,
+                    AppLocalizations.of(context).descriptionCompany2Line2,
                   ],
                 ),
               ],
